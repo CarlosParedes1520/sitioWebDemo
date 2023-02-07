@@ -1,1 +1,49 @@
-<p>progress works!</p>
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Striped Progress bar {{getProgres1}}</h4>
+                <div class="progress m-t-20">
+                    <div class="progress-bar bg-primary progress-bar-striped active "  
+                         style=" height:10px;" 
+                        [style.width]="getProgres1"
+                         role="progressbar"> 
+                         
+                    </div>
+                </div>
+
+                <div class="progress m-t-20">
+                    <div class="progress-bar bg-info progress-bar-striped active "  
+                         style=" height:10px;" 
+                         [style.width]="getProgres2"
+                         role="progressbar">                     
+                            
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-6">
+        <div class="card">
+             <div class="card-body">
+              <!-- <app-incrementador (valorSalida)=" cambioValorHijo($event) "  [progreso]="valor"></app-incrementador> -->
+              <app-incrementador (valorSalidaSS)="valor = $event"  [valorSS]="valor"></app-incrementador>
+            </div>
+        </div>
+       
+    </div>
+    <div class="col-6">
+        <div class="card">
+             <div class="card-body">
+                <app-incrementador 
+                (valorSalidaSS)="valor2 = $event"
+                [btnClass]="'btn-info'"></app-incrementador>
+            </div>
+        </div>
+       
+    </div>
+</div>

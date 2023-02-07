@@ -1,1 +1,19 @@
-<p>grafica1 works!</p>
+<div class="row">
+    <div class="col-6">
+        <app-dona  ></app-dona>
+    </div>
+    <div class="col-6">
+        <app-dona [ventas]="titulo1" [doughnutChartData]="ChartData"></app-dona>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-6">
+        <app-dona [ventas]="titulo2" [doughnutChartData]="ChartData2"></app-dona>
+    </div>
+    <div class="col-6">
+        <app-dona [ventas]="titulo3" [doughnutChartData]="ChartData3"></app-dona>
+    </div>
+</div>
+
+
