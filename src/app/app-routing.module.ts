@@ -14,14 +14,14 @@ const routes: Routes = [
     loadChildren: () => import('./pages/pages.module').then(m => m.PagesModule)
   },
   {
-    path: '**', 
+    path: '**',
     component: NopagefoundComponent
   },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes),
-    // PagesRoutingModule
+     PagesRoutingModule
   ],
   exports: [RouterModule]
 })
