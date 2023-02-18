@@ -1,0 +1,13 @@
+.img-icon{
+ width: 200px;
+ height: 200px;
+
+ /* margin: 2% auto; */
+}
+
+.ss{
+    display: flex;
+    justify-content: center!important;
+    align-items: center!important; 
+    margin-bottom: 2%;
+}

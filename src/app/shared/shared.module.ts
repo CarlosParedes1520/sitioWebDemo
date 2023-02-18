@@ -20,7 +20,8 @@ import { RouterModule } from '@angular/router';
   exports: [
     BreadcrumsComponent,
     HeaderComponent,
-    SidebarComponent
+    SidebarComponent,
+    RouterModule
   ]
 })
 export class SharedModule { }
