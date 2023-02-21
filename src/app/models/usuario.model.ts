@@ -16,19 +16,21 @@ export class Usuario {
         public uid?: String
 
     ) {}
+
     get imagenUrl() {
-        // /uploads/usuario/no-image
        
+        if (!this.img) {
+            return `${base_url}/uploads/usuarios/no-image`;              
+        }
+
         if (this.img?.includes('https')) {
             return this.img;
         }
         
-        if (this.img) { 
+        if (this.img ) { 
             return `${base_url}/uploads/usuarios/${this.img}`;
         }else{
-            return `${base_url}/uploads/usuarios/no-image`;
-            
-            
+            return `${base_url}/uploads/usuarios/no-image`;   
         }
         
     }
