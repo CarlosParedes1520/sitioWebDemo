@@ -10,6 +10,9 @@ import { ProgressComponent } from './progress/progress.component';
 import { PromesasComponent } from './promesas/promesas.component';
 import { RxjsComponent } from './rxjs/rxjs.component';
 import { UsuariosComponent } from './mantenimientos/usuarios/usuarios.component';
+import { MedicosComponent } from './mantenimientos/medicos/medicos.component';
+import { HospitalesComponent } from './mantenimientos/hospitales/hospitales.component';
+import { MedicoComponent } from './mantenimientos/medico/medico.component';
 
 const routes: Routes = [
   {
@@ -55,6 +58,24 @@ const routes: Routes = [
         path: 'perfil', 
         component: PerfilComponent,
         data:{titulo: 'Perfil de usuario!!!'}
+      },
+
+      {
+        path: 'medicos', 
+        component: MedicosComponent,
+        data:{titulo: 'Medicos!!!'}
+      },
+
+      {
+        path: 'medico/:id', 
+        component: MedicoComponent,
+        data:{titulo: 'Medico!!!'}
+      },
+
+      {
+        path: 'hospitales', 
+        component: HospitalesComponent,
+        data:{titulo: 'Hospitales!!!'}
       },
 
       {

@@ -4,8 +4,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NopagefoundComponent } from './nopagefound/nopagefound.component';
-import { PagesModule } from './pages/pages.module';
 import { AuthModule } from './auth/auth.module';
+import { PipesModule } from './pipes/pipes.module';
+
 
 @NgModule({
   declarations: [
@@ -16,8 +17,9 @@ import { AuthModule } from './auth/auth.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    PagesModule,
+    
     AuthModule,
+    PipesModule
   ],
   providers: [],
   bootstrap: [AppComponent]
