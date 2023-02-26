@@ -43,6 +43,12 @@ export class BusquedasService {
     return resultados
   }
 
+  busquedaGlobal(termino: string) {
+
+    const url = `${base_ur}/todo/${termino}`;
+    return this.http.get<any[]>(url, this.headers)
+  }
+
   buscar(tipo: 'usuarios' | 'medicos' | 'hospitales', termino: string) {
     const url = `${base_ur}/todo/coleccion/${tipo}/${termino}`;
     return this.http.get<any[]>(url, this.headers)
@@ -73,25 +79,6 @@ export class BusquedasService {
     );
   }
 
-  // buscar2(tipo: 'usuarios' | 'medicos' | 'hospitales', termino: string) {
-  //   const url = `${base_ur}/todo/coleccion/${tipo}/${termino}`;
-  //   return this.http.get<any[]>(url, this.headers)
-  //   .pipe(
-  //     map( (resp: any) => {
-
-  //       switch (tipo) {
-  //         case 'hospitales':
-  //           console.log(resp.resultados);
-            
-  //         return this.transformarHospital(resp.resultados)
-  //         // break
-
-  //         default:
-  //           return [];
-  //       }
-  //     })
-  //   );
-  // }
 
 
 
